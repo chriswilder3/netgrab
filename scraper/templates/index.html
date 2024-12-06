@@ -15,13 +15,21 @@
         <h3 class=" text-2xl font-semibold">
             Scrapes all links of any website 
         </h3>
-        <form action="" class="*:m-1 my-3 flex flex-row mx-auto justify-center" >
-            <input type="text" placeholder="Enter url of the Website"
+        <h4>
+            Please include 'https://' in your URL.
+        </h4>
+        <form action="{% url 'index' %}" method="post" class="*:m-1 my-3 flex flex-row mx-auto justify-center" >
+            {% csrf_token %}
+            <input type="text" name="url" placeholder="Enter url of the Website"
                 class=" m-3 p-2 border-sky-500 border-2 min-w-72 rounded">
-            <button type="submit" class="p-2 bg-slate-700 text-slate-200 
+            <button type="submit" class="p-1 px-1 mx-1 bg-slate-700 text-slate-200 
                  hover:bg-slate-800 hover:text-white hover:scale-105 rounded"> 
                 Get links 
             </button>
+            <a href="{% url 'delete' %}" class="p-1 px-1 mx-1 bg-red-500 text-slate-200 
+                hover:bg-red-600 hover:text-white hover:scale-105 rounded"> 
+                Delete
+            </a>
         </form>
         <table class=" " border="2">
             <thead>
