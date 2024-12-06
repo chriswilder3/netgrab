@@ -15,10 +15,13 @@
         <h3 class=" text-2xl font-semibold">
             Scrapes all links of any website 
         </h3>
-        <form action="" class="*:m-1 flex flex-row mx-auto justify-center" >
+        <form action="" class="*:m-1 my-3 flex flex-row mx-auto justify-center" >
             <input type="text" placeholder="Enter url of the Website"
                 class=" m-3 p-2 border-sky-500 border-2 min-w-72 rounded">
-            <button type="submit" class="p-2 bg-slate-700 text-slate-200 rounded"> Get links </button>
+            <button type="submit" class="p-2 bg-slate-700 text-slate-200 
+                 hover:bg-slate-800 hover:text-white hover:scale-105 rounded"> 
+                Get links 
+            </button>
         </form>
         <div class="flex flex-col bg-slate-100 ">
             {% for link in links %}
